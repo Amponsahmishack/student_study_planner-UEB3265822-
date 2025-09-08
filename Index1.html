@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Planner</title>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #1c1c1c;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+            width: 350px;
+        }
+        h2 {
+            text-align: center;
+            background: linear-gradient(to right, #7f00ff, #00bfff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+        input[type="date"] {
+            background-color: #fff;
+            color: black;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #a855f7;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #9333ea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Study Planner</h2>
+        <form action="insert.php" method="POST">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" id="subject" placeholder="e.g. Mathematics" required>
+
+            <label for="task">Task</label>
+            <textarea name="task" id="task" rows="4" placeholder="Describe the study task..." required></textarea>
+
+            <label for="due_date">Due Date</label>
+            <input type="date" name="due_date" id="due_date" required>
+
+            <button type="submit">Add To Planner</button>
+        </form>
+    </div>
+</body>
+</html>
